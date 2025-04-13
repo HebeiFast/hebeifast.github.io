@@ -1,0 +1,95 @@
+# 网站名称
+site_name: My Docs
+
+# GitHub 部署配置
+site_url: https://hebeifast.github.io
+repo_url: https://github.com/hebeifast/hebeifast.github.io
+repo_name: hebeifast/hebeifast.github.io
+
+# 导航栏配置
+nav:
+  - Home: index.md
+  - 硬件:
+      - 硬件概述: hardware/index.md
+      # - 电路设计: hardware/circuit.md
+      # - PCB设计: hardware/pcb.md
+  - 嵌入式:
+      - 嵌入式概述: software/embedded/index.md
+      # - MCU: embedded/mcu.md
+      # - RTOS: embedded/rtos.md
+      # - 驱动开发: embedded/driver.md
+  - AI:
+      - AI概述: software/ai/index.md
+      # - 机器学习: ai/machine-learning.md
+      # - 深度学习: ai/deep-learning.md
+  - About: about.md    # 新增 About 页面
+
+# 主题设置
+theme:
+  # 使用 Material 主题
+  name: material
+  
+  # 功能特性配置
+  features:
+    - navigation.tabs        # 启用顶部导航标签
+    - navigation.top        # 启用返回顶部按钮
+    - navigation.sections   # 启用章节导航
+    - navigation.expand     # 自动展开导航
+    - navigation.indexes    # 启用章节索引页
+    - search.suggest       # 搜索建议
+    - search.highlight     # 搜索高亮
+    - content.code.copy    # 代码块复制按钮
+    
+  # 设置语言为中文
+  language: zh
+  
+  # 配色方案 - 深黑色主题
+  palette:
+    scheme: slate          # 深色主题底色
+    primary: black         # 主要颜色设置为黑色
+    accent: grey          # 强调色设置为灰色
+    background: black  # 背景色设置为黑色
+  
+  # 字体设置
+  font:
+    text: Roboto        # 正文字体
+    code: Roboto Mono   # 代码字体
+  
+  # 额外功能设置
+  extra:
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/hebeifast
+        name: GitHub
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+
+# 额外的 CSS 设置，使主题更暗
+extra_css:
+  - stylesheets/extra.css
+
+# Markdown 扩展
+markdown_extensions:
+  - tables                # 表格支持
+  - attr_list            # 属性列表
+  - def_list             # 定义列表
+  - footnotes            # 脚注
+  - admonition           # 提示块
+  - pymdownx.details     # 可折叠块
+  - pymdownx.superfences # 代码块、图表等
+  - pymdownx.highlight   # 代码高亮
+  - pymdownx.inlinehilite # 行内代码高亮
+  - pymdownx.snippets    # 代码段
+  - pymdownx.tasklist    # 任务列表
+  - pymdownx.emoji:      # emoji 支持
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:                 # 目录
+      permalink: true    # 永久链接
+      toc_depth: 3      # 目录深度
+
+# 额外插件
+plugins:
+  - search              # 搜索插件
+  - tags               # 标签支持
