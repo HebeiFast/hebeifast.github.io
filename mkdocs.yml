@@ -14,12 +14,12 @@ nav:
       # - 电路设计: hardware/circuit.md
       # - PCB设计: hardware/pcb.md
   - 嵌入式:
-      - 嵌入式概述: software/embedded/index.md
+      - 嵌入式概述: embedded/index.md
       # - MCU: embedded/mcu.md
       # - RTOS: embedded/rtos.md
       # - 驱动开发: embedded/driver.md
   - AI:
-      - AI概述: software/ai/index.md
+      - AI概述: ai/index.md
       # - 机器学习: ai/machine-learning.md
       # - 深度学习: ai/deep-learning.md
   - About: about.md    # 新增 About 页面
